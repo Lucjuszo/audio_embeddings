@@ -17,7 +17,7 @@ The matrix below presents the analysis results. The warmer the color and the clo
 Below is a complete list of all 45 tested pairs, ordered from highest similarity. Notice how well the model handles grouping tracks of the same genre (`YES` value).
 
 <details>
-<summary><b>Expand full results table (46 rows)</b></summary>
+<summary><b>Expand full results table</b></summary>
 
 | File A | File B | Genre A | Genre B | Similarity | Same Genre |
 | :--- | :--- | :--- | :--- | :--- | :--- |
