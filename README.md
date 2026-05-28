@@ -1,6 +1,3 @@
-# audio_embeddings
-Measure the mathematical acoustic similarity between different audio files.
-
 # 🎵 Audio Similarity AI
 
 Proste, ale potężne narzędzie do analizy i porównywania utworów muzycznych przy użyciu sztucznej inteligencji. Projekt wykorzystuje zaawansowany model **CLAP (Contrastive Language-Audio Pretraining)**, aby ocenić matematyczne podobieństwo brzmieniowe między różnymi plikami audio i sprawdzić, jak AI grupuje utwory w ramach gatunków muzycznych.
@@ -15,6 +12,26 @@ Proste, ale potężne narzędzie do analizy i porównywania utworów muzycznych 
 Poniższa macierz przedstawia wyniki analizy. Im cieplejszy kolor i wynik bliższy `1.0`, tym większe podobieństwo między utworami zdaniem sztucznej inteligencji:
 
 ![Macierz podobieństwa cosinusowego](similarity_heatmap.png)
+
+## 📑 Szczegółowe wyniki podobieństwa (CSV)
+Poniżej znajduje się pełne zestawienie wszystkich 45 przebadanych par ułożonych od najwyższego podobieństwa. Zauważ, że model świetnie radzi sobie z grupowaniem utworów tego samego gatunku (wartość `TAK`).
+
+<details>
+<summary><b>Rozwiń pełną tabelę wyników (46 wierszy)</b></summary>
+
+| Plik A | Plik B | Gatunek A | Gatunek B | Podobieństwo | Ten sam gatunek |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Took_Her_To_The_O.wav | PLEDGE.wav | rap | rap | 0.9412 | TAK |
+| Master_of_Puppets.wav | Cowboys_From_Hell.wav | metal | metal | 0.9105 | TAK |
+| Caprice_No24.wav | Fur_Elise.wav | classical | classical | 0.8873 | TAK |
+| MR_RECOUP.wav | PLEDGE.wav | rap | rap | 0.8521 | TAK |
+| Ace_Of_Spades.wav | Master_of_Puppets.wav | metal | metal | 0.8314 | TAK |
+| ... | ... | ... | ... | ... | ... |
+| Fur_Elise.wav | Took_Her_To_The_O.wav | classical | rap | 0.1124 | NIE |
+| Caprice_No24.wav | Cowboys_From_Hell.wav | classical | metal | 0.0841 | NIE |
+
+*(Pełne dane znajdziesz w pliku `similarity_results.csv` w repozytorium).*
+</details>
 
 ## 🛠️ Technologie
 * **Python 3**
@@ -31,9 +48,7 @@ Ze względów prawnych repozytorium nie zawiera plików audio. Aby przetestować
 
    ```bash
    pip install torch librosa numpy pandas matplotlib seaborn transformers scikit-learn
-3. Stwórz folder o nazwie moje_audio w głównym katalogu projektu.
+   **3. Stwórz folder o nazwie moje_audio w głównym katalogu projektu.
 4. Wrzuć do niego własne pliki .wav.
 5. Dostosuj słownik GATUNKI w pliku audio_ai.py do swoich plików.
-6. Uruchom skrypt: python audio_ai.py.
-
-   
+6. Uruchom skrypt: python audio_ai.py.**
