@@ -51,4 +51,4 @@ For legal reasons, the repository does not contain the audio files. To test the 
 3. Create a folder named my_audio in the main project directory.
 4. Put your own .wav files in it.
 5. Adjust the GENRES dictionary in the audio_ai.py file to match your files.
-6. Run the script: python audio_ai.py
+6. Run the script: python main.py
